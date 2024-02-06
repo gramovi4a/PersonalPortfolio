@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.svg"
+import headerImg from "../../assets/img/header-img.svg"
 
+import './Banner.css';
 
 export const Banner = () => {
+  
+  const [activeLink, setActiveLink] = useState("home");
+
     const [loopNum, setLoopNum] = useState(0);
     // is the word typing out or deleting, fasle => meaning typing
     const [isDeleting, setIsDeleting] = useState(false);
@@ -16,7 +20,7 @@ export const Banner = () => {
     // which text to display
     const toRotate = [ "Software Developer", "Software Engineer", "Web Developer"];
     // how much time passes between typing one letter
-    const period = 2000;
+    const period = 200;
 
 
     // function that takes care of typing or deleting
@@ -53,20 +57,32 @@ export const Banner = () => {
     }
 }
 
+const onUpdateActiveLink = (value) => {
+  setActiveLink(value);
+};
+
   return (
     <section className="banner" id="home">
       {/* bootstrap container  */}
       <Container>
-        <Row className="align-items-center">
+        <Row className="align-items-center" >
           <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Welcome to my portfolio!</span>
-            {/* text rotating */}
-            <h1>{'Hi, I am Julija, '}<span className="wrap">{text}</span></h1>
+            {/* <span className="tagline">Welcome to my portfolio!</span> */}
+            <div className="rotating-text-container">
+              <h1>
+                {'Hi! I am Julija'} </h1>
+                <h1><span className="wrap">{text}</span>
+              </h1>
+            </div>
+            <div className="main-banner-text">
             <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-             scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into 
+              I am a third semester student who is currently looking for an internship and student worker job!
             </p>
-            <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25}/></button>
+            </div>
+            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">
+              <button>See my CV <ArrowRightCircle size={25} /></button>
+            </a>
+            {/* <button onClick={() => onUpdateActiveLink("connect")}>See my CV <ArrowRightCircle size={25}/></button> */}
           </Col>
           <Col xs={12} md={6} xl={5}>
           <img src={headerImg} alt = 'Header Img'/>

@@ -1,4 +1,5 @@
 import { Col } from "react-bootstrap"
+import './Projects.css';
 
 export const ProjectCard = ({title, description, imgUrl}) => {
     return (
