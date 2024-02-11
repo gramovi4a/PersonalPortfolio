@@ -2,9 +2,16 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import meter1 from "../../assets/img/meter1.svg";
-import meter2 from "../../assets/img/meter2.svg";
-import meter3 from "../../assets/img/meter3.svg";
+import reactjs from "../../assets/img/reactjs.png";
+import java from "../../assets/img/java.png";
+import javascript from "../../assets/img/javascript.png";
+import csharp from "../../assets/img/csharpIcon.png";
+import net from "../../assets/img/.net.png";
+import html from "../../assets/img/html.png";
+import css from "../../assets/img/css.png";
+import sql from "../../assets/img/sql.png";
+import blazor from "../../assets/img/blazor.svg";
+import springboot from "../../assets/img/springboot.png";
 import colorSharp from "../../assets/img/color-sharp.png";
 import './Skills.css';
 
@@ -36,35 +43,51 @@ export const Skills = () => {
         <Row>
           <Col>
             <div className="skill-bx">
-              <h2>Skills</h2>
-              <p>These are my skills</p>
+              <h2>Technical Skills</h2>
+              <p>These are languages and tools I am familiar with</p>
               <Carousel
                 responsive={responsive}
                 infinite={true}
                 className="skill-slider"
               >
                 <div className="item">
-                  <img src={meter1} alt="Image"></img>
-                  <h5>C#</h5>
+                  <img src={java} alt="Image"></img>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="Image"></img>
-                  <h5>Java</h5>
+                  <img src={csharp} alt="Image"></img>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt="Image"></img>
-                  <h5>JavaScript</h5>
+                  <img src={javascript} alt="Image"></img>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="Image"></img>
-                  <h5>React</h5>
+                  <img src={reactjs} alt="Image"></img>
+                </div>
+                <div className="item">
+                  <img src={net} alt="Image"></img>
+                </div>
+                <div className="item">
+                  <img src={blazor} alt="Image"></img>
+                </div>            
+                <div className="item">
+                  <img src={springboot} alt="Image"></img>
+                </div>
+                <div className="item">
+                  <img src={sql} alt="Image"></img>
+                </div>
+                <div className="item">
+                  <img src={html} alt="Image"></img>
+                </div>
+                <div className="item">
+                  <img src={css} alt="Image"></img>
                 </div>
               </Carousel>
             </div>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-left" src={colorSharp}></img>
+      <img className="background-image-left" src={colorSharp} alt="Imageleft"></img>
+
+
     </section>
   );
 };

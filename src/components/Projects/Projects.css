@@ -1,6 +1,6 @@
 /**************** Projects **********/
 .project {
-    padding: 50px 0 100px 0;
+    padding: 60px 0 70px 0;
     position: relative;
     background-color: black;
   }
@@ -47,7 +47,7 @@
       position: absolute;
       width: 0;
       height: 100%;
-      background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+      background: linear-gradient(90.21deg, #903749 10.91%, #E84545 111.58%);
       top: 0;
       left: 0;
       z-index: -1;
@@ -81,7 +81,7 @@
   }
   .proj-imgbx::before {
     content: "";
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #E84545 111.58%);
     opacity: 0.85;
     position: absolute;
     width: 100%;

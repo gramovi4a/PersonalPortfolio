@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../../assets/img/header-img.svg"
+import headerImg from "../../assets/img/banner-img.png"
 
 import './Banner.css';
 
@@ -18,7 +18,7 @@ export const Banner = () => {
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
     // which text to display
-    const toRotate = [ "Software Developer", "Software Engineer", "Web Developer"];
+    const toRotate = [ "Software Developer", "Full-Stack Developer"];
     // how much time passes between typing one letter
     const period = 200;
 
@@ -67,25 +67,17 @@ const onUpdateActiveLink = (value) => {
       <Container>
         <Row className="align-items-center" >
           <Col xs={12} md={6} xl={7}>
-            {/* <span className="tagline">Welcome to my portfolio!</span> */}
-            <div className="rotating-text-container">
-              <h1>
-                {'Hi! I am Julija'} </h1>
-                <h1><span className="wrap">{text}</span>
-              </h1>
-            </div>
-            <div className="main-banner-text">
+              <h1>{'Hi! I am Julija'}</h1>
+              <h1> <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Developer", "Full-Stack Developer" ]'><span className="wrap">{text}</span></span></h1>
             <p>
-              I am a third semester student who is currently looking for an internship and student worker job!
+            From classroom to career! As a fourth-semester student, I'm on the lookout for an internship and a student worker position to turn my academic knowledge into real-world achievements. Check out my newest portfolio to see who I am and what I do!
             </p>
-            </div>
             <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">
               <button>See my CV <ArrowRightCircle size={25} /></button>
             </a>
-            {/* <button onClick={() => onUpdateActiveLink("connect")}>See my CV <ArrowRightCircle size={25}/></button> */}
           </Col>
           <Col xs={12} md={6} xl={5}>
-          <img src={headerImg} alt = 'Header Img'/>
+          {/* <img src={headerImg} alt = 'Header Img'/> */}
           </Col>
         </Row>
       </Container>

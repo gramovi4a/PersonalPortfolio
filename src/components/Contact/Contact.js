@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import contactImg from "../../assets/img/contact-img.svg"
+import contactImg from "../../assets/img/contact-img.png";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaPaperPlane } from "react-icons/fa6";
 
-import './Contact.css';
+import "./Contact.css";
 
 export const Contact = () => {
   const [done, setDone] = useState(false);
@@ -25,7 +27,11 @@ export const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    if (!formDetails.user_name || !formDetails.user_email || !formDetails.message) {
+    if (
+      !formDetails.user_name ||
+      !formDetails.user_email ||
+      !formDetails.message
+    ) {
       setErrorMessage("Please fill in all fields.");
       return;
     }
@@ -63,14 +69,31 @@ export const Contact = () => {
   return (
     <section className="contact" id="contact">
       <Container>
-        <Row className="align-items-center">
-          <Col size={12} md={6}>
-            <img src={contactImg} alt="Contact Me"></img>
+        <Row className="align-items-start text-center-left">
+          <Col size={12} md={6} className="firstcol">
+            <h3>Let's connect</h3>
+            <p>
+              I'm currently looking for new job opportunities and ways for
+              applying my knowledge. Do not hesitate to reach out to me. Your
+              feedback is always welcomed!{" "}
+            </p>
+            <div className="mt-5">
+            <h5 className="mb-3">
+              {" "}
+              <FaPaperPlane />{" "}
+              <span style={{ marginLeft: "0.5rem" }}>jgramovica@gmail.com</span>
+            </h5>
+            <h5 className="mb-3">
+              {" "}
+              <FaPhoneAlt />{" "}
+              <span style={{ marginLeft: "0.5rem" }}>50 19 32 64</span>
+            </h5>
+            </div>
           </Col>
           <Col size={12} md={6} className="text-center">
-            <h2>Contact me</h2>
+            {/* <h2>Contact me</h2> */}
             <form ref={form} onSubmit={sendEmail}>
-              <div className="mb-3">
+              <div className="mb-2">
                 <input
                   type="text"
                   name="user_name"
@@ -80,7 +103,7 @@ export const Contact = () => {
                   onChange={handleInputChange}
                 />
               </div>
-              <div className="mb-3">
+              <div className="mb-2">
                 <input
                   type="email"
                   name="user_email"
@@ -90,9 +113,9 @@ export const Contact = () => {
                   onChange={handleInputChange}
                 />
               </div>
-              <div className="mb-3">
+              <div className="mb-2">
                 <textarea
-                  rows="6"
+                  rows="5"
                   name="message"
                   className="user"
                   placeholder="Message"
@@ -100,7 +123,7 @@ export const Contact = () => {
                   onChange={handleInputChange}
                 />
               </div>
-              <div className="mb-3">
+              <div className="mb-2">
                 <button type="submit">
                   <span>Send</span>
                 </button>

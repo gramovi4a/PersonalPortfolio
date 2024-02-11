@@ -1,15 +1,34 @@
 /********* Contact ********/
 .contact {
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-    padding: 100px 0 50px 0;
+    /* background: linear-gradient(90.21deg, #E84545 -5.91%, #903749 70.58%); */
+    background: linear-gradient(to right, #E84545, #53354A);
+    padding: 90px 0 0px 0;
   }
+
+  @media (max-width: 576px) {
+    .contact .align-items-start .firstcol {
+        align-items: center;
+        text-align: center;
+
+    }
+}
+@media (max-width: 576px) {
+  .contact .align-items-start .firstcol p {
+      padding: 0 0 0 0;
+  }
+}
+
+.contact p {
+  padding: 0 200px 0 0;
+  line-height: 1.5;
+}
   .contact img {
-    width: 92%;
+    width: 50%;
   }
-  .contact h2 {
-      font-size: 45px;
-      font-weight: 700;
-    margin-bottom: 30px;
+  .contact h3 {
+      font-size: 40px;
+      font-weight: 800;
+    margin-bottom: 20px;
   }
   .contact form input, .contact form textarea {
     width: 100%;
