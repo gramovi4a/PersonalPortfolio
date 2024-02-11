@@ -91,7 +91,6 @@ export const Contact = () => {
             </div>
           </Col>
           <Col size={12} md={6} className="text-center">
-            {/* <h2>Contact me</h2> */}
             <form ref={form} onSubmit={sendEmail}>
               <div className="mb-2">
                 <input

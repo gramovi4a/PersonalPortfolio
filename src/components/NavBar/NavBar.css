@@ -151,3 +151,31 @@ nav.navbar {
   nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
       border-color: transparent;
   }
+
+
+  @media (max-width: 767px) {
+    nav.navbar .navbar-collapse {
+      text-align: center;
+      background-image: url("../../assets/img/banner-bg.png");
+
+    }
+    nav.navbar .navbar-nav {
+      display: inline-block;
+      text-align: center;
+    }
+    nav.navbar .navbar-nav .nav-item {
+      display: inline-block;
+      float: none;
+      margin: 0;
+    }
+    .navbar-text {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar-text a {
+      margin-right: 5;
+      margin-bottom: 15px;
+
+    }
+
+  }

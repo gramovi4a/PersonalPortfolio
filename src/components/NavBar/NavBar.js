@@ -31,8 +31,9 @@ export const NavBar = () => {
     setActiveLink(value);
   };
 
+  // https://react-bootstrap.netlify.app/docs/components/navbar/
   return (
-    <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+    <Navbar expand="md" className={scrolled ? "scrolled" : ""} collapseOnSelect>
       <Container>
         <Navbar.Brand href="#home">
           <img src={mylogo} alt="logo"></img>
@@ -40,7 +41,7 @@ export const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className="me-auto">
             <Nav.Link
               href="#home"
@@ -50,6 +51,15 @@ export const NavBar = () => {
               onClick={() => onUpdateActiveLink("home")}
             >
               Home
+            </Nav.Link>
+            <Nav.Link
+              href="#about"
+              className={
+                activeLink == "about" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("about")}
+            >
+              About
             </Nav.Link>
             <Nav.Link
               href="#skills"
