@@ -29,8 +29,8 @@ export const About = () => {
               learner, a person that does not stop till the work is done, and
               done properly. I am a collaborator, and I believe, that working
               with other people and their diverse experiences and perspectives
-              is what makes you grow. But I can take initiative make important
-              decisions.{" "}
+              is what makes you grow. But I can always take initiative to make important
+              decisions without hesitation.{" "}
             </p>
             <p>
               Be open-minded and don't be afraid of anything - that's my motto.

@@ -155,8 +155,10 @@ nav.navbar {
 
   @media (max-width: 767px) {
     nav.navbar .navbar-collapse {
+      padding: 10px 0 0 0;
       text-align: center;
       background-image: url("../../assets/img/banner-bg.png");
+      border-radius: 10px;
 
     }
     nav.navbar .navbar-nav {
